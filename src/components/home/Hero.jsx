@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { MessageCircle, ChevronDown } from 'lucide-react'
+import { MessageCircle, ChevronDown, MapPin } from 'lucide-react'
 import { useSettings } from '../../contexts/SettingsContext'
 
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=1600&auto=format&fit=crop&q=80'
@@ -47,6 +47,11 @@ export default function Hero() {
             <Link to="/models"
               className="inline-flex items-center gap-2 bg-gold-gradient text-white px-7 py-3.5 rounded-xl font-cairo font-bold text-base shadow-gold-lg hover:shadow-gold hover:scale-105 transition-all duration-300">
               تصفح الموديلات
+            </Link>
+            <Link to="/request-visit"
+              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/40 hover:border-white/70 text-white px-7 py-3.5 rounded-xl font-cairo font-bold text-base transition-all duration-300 hover:scale-105">
+              <MapPin className="w-5 h-5" />
+              طلب معاينة
             </Link>
             {whatsapp && (
               <a href={`https://wa.me/${whatsapp}`} target="_blank" rel="noopener noreferrer"

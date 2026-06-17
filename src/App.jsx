@@ -15,6 +15,7 @@ import Home from './pages/public/Home'
 import Models from './pages/public/Models'
 import ModelDetail from './pages/public/ModelDetail'
 import MySelection from './pages/public/MySelection'
+import RequestVisit from './pages/public/RequestVisit'
 
 // Admin Pages
 import Login from './pages/admin/Login'
@@ -76,6 +77,7 @@ export default function App() {
                 <Route path="/models" element={<Models />} />
                 <Route path="/models/:id" element={<ModelDetail />} />
                 <Route path="/selection" element={<MySelection />} />
+                <Route path="/request-visit" element={<RequestVisit />} />
               </Route>
 
               {/* Admin */}

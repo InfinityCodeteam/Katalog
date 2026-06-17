@@ -22,3 +22,9 @@ export function openWhatsApp(phoneNumber, items) {
   const url = `https://wa.me/${cleanPhone}?text=${encodedMessage}`
   window.open(url, '_blank', 'noopener,noreferrer')
 }
+
+export function openWhatsAppWithMessage(phoneNumber, message) {
+  const cleanPhone = phoneNumber.replace(/\D/g, '')
+  const url = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(message)}`
+  window.open(url, '_blank', 'noopener,noreferrer')
+}
